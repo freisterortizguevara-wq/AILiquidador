@@ -678,7 +678,7 @@ export default function ReportesPage() {
               >
                 <option value="">Selecciona una empresa</option>
                 {empresas.map((emp) => (
-                  <option key={emp.id} value={emp.id}>
+                  <option key={emp.id.toString()} value={emp.id.toString()}>
                     {emp.nombre} — NIT {emp.nit}
                   </option>
                 ))}
@@ -930,7 +930,7 @@ export default function ReportesPage() {
                       <tbody className="divide-y divide-gray-200 dark:divide-white/[0.08]">
                         {data.incapacidades.map((inc) => (
                           <tr
-                            key={inc.id}
+                            key={inc.id.toString()}
                             className="transition-colors duration-150 hover:bg-gray-50 dark:hover:bg-white/[0.03]"
                           >
                             <td className="px-6 py-4 tabular-nums text-gray-400 dark:text-white/40 font-mono text-[12px]">
